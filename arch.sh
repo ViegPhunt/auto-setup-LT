@@ -21,6 +21,10 @@ makepkg -si --noconfirm
 cd ~
 rm -rf ~/yay
 sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip wget dpkg fzf eza
+git clone https://gitlab.com/jallbrit/cbonsai
+cd cbonsai
+sudo make install
+cd ..
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
