@@ -13,6 +13,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 cd ~
+rm -rf ~/yay
 sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip wget dpkg fzf eza
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
