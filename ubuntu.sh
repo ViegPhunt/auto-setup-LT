@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y
 cd ~
 
 echo "Download some terminal tool"
-sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf bat neovim
+sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf bat bacula-console-qt neovim
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
@@ -55,4 +55,4 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 sudo apt install zsh -y
-chsh -s $(which zsh)
+chsh -s /usr/bin/zsh
