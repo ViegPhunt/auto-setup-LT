@@ -81,6 +81,7 @@ fi
 '
 # Setup bat (better than cat)
 export BAT_THEME=Dracula
+alias bat='bat --paging=never'
 
 
 
