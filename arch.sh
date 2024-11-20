@@ -45,15 +45,15 @@ rm -rf ~/pokemon-colorscripts
 
 echo 'Download file config'
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.zshrc -O .zshrc
-sudo chmod +x .zshrc
+sudo chmod a+wx .zshrc
 mkdir ~/.poshthemes
 cd ~/.poshthemes
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/viet.omp.json -O viet.omp.json
-sudo chmod +x viet.omp.json
+sudo chmod a+wx viet.omp.json
 mkdir -p ~/.config/fastfetch
 cd ~/.config/fastfetch
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/arch.jsonc -O config.jsonc
-sudo chmod +x config.jsonc
+sudo chmod a+wx config.jsonc
 cd ~
 
 echo "Config Oh-My-Posh"
