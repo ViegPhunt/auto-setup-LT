@@ -16,3 +16,9 @@ bash -c "$(curl -fSL https://bit.ly/aslt-ubuntu-sh)"
 sudo pacman -Syu --noconfirm
 bash -c "$(curl -fSL https://bit.ly/aslt-arch-sh)"
 ```
+
+### Fedora
+```
+sudo dnf update -y
+bash -c "$(curl -fSL https://bit.ly/aslt-fedora-sh)"
+```
