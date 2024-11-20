@@ -8,7 +8,12 @@ sudo apt update && sudo apt upgrade -y
 cd ~
 
 echo "Download some terminal tool"
-sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf bat bacula-console-qt neovim
+sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg bat bacula-console-qt neovim
+git clone --depth 1 https://github.com/junegunn/fzf.git
+cd fzf
+./install --bin
+cd ..
+rm -rf fzf
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
