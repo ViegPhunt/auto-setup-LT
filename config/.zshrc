@@ -19,11 +19,24 @@ setopt appendhistory
 setopt sharehistory
 
 # Set-up icons for files/folders in terminal
-alias ls='eza --icons --color=auto'
-alias lt='eza -a --tree --level=1 --icons --color=auto'
-alias grep='grep --color=auto'
+alias ls='eza --icons --color=always'
+alias lt='eza -a --tree --level=1 --icons --color=always'
+alias grep='grep --color=always'
+alias vim='nvim'
 
 bindkey -e
+
+# Setup fzf
+eval "$(fzf --zsh)"
+
+# fzf theme
+export FZF_DEFAULT_OPTS='
+--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 
+--color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 
+--color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 
+--color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4
+'
+export FZF_TAB_COLORS='fg:#f8f8f2,bg:#282a36,hl:#bd93f9,min-height=5'
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -57,7 +70,17 @@ zinit cdreplay -q
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' fzf-flags --height=17
+zstyle ':fzf-tab:complete:*' fzf-preview '
+if [ -d "$realpath" ]; then
+    eza --icons --tree --level=2 --color=always "$realpath"
+elif [ -f "$realpath" ]; then
+    bat -n --color=always --line-range :500 "$realpath"
+fi
+'
+# Setup bat (better than cat)
+export BAT_THEME=Dracula
 
 
 
