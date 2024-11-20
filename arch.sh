@@ -25,6 +25,7 @@ git clone https://gitlab.com/jallbrit/cbonsai
 cd cbonsai
 sudo make install
 cd ..
+rm -rf cbonsai
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
@@ -43,13 +44,13 @@ cd ..
 rm -rf ~/pokemon-colorscripts
 
 echo 'Download file config'
-sudo wget https://github.com/VietPQ685/auto-setup-LT/releases/latest/download/config.zshrc -O .zshrc
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.zshrc -O .zshrc
 mkdir ~/.poshthemes
 cd ~/.poshthemes
-sudo wget https://github.com/VietPQ685/auto-setup-LT/releases/latest/download/viet.omp.json -O viet.omp.json
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/viet.omp.json -O viet.omp.json
 mkdir -p ~/.config/fastfetch
 cd ~/.config/fastfetch
-sudo wget https://github.com/VietPQ685/auto-setup-LT/releases/latest/download/arch.jsonc -O config.jsonc
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/arch.jsonc -O config.jsonc
 cd ~
 
 echo "Config Oh-My-Posh"
