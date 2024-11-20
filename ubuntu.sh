@@ -44,7 +44,7 @@ sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/vi
 sudo chmod a+wx viet.omp.json
 mkdir -p ~/.config/fastfetch
 cd ~/.config/fastfetch
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/arch.jsonc -O config.jsonc
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/ubuntu.jsonc -O config.jsonc
 sudo chmod a+wx config.jsonc
 cd ~
 
