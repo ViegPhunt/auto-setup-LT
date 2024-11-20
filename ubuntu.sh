@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y
 cd ~
 
 echo "Download some terminal tool"
-sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf bat nvim
+sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf bat neovim
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
