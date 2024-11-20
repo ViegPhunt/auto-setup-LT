@@ -20,7 +20,12 @@ cd yay
 makepkg -si --noconfirm
 cd ~
 rm -rf ~/yay
-sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip wget dpkg fzf eza bat neovim
+sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip wget dpkg eza bat neovim
+git clone --depth 1 https://github.com/junegunn/fzf.git
+cd fzf
+./install --bin
+cd ..
+rm -rf fzf
 git clone https://gitlab.com/jallbrit/cbonsai
 cd cbonsai
 sudo make install
