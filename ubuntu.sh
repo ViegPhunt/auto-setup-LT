@@ -8,11 +8,15 @@ sudo apt update && sudo apt upgrade -y
 cd ~
 
 echo "Download some terminal tool"
-sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg bat bacula-console-qt neovim
+sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg jq neovim
+sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat-musl_.*amd64.deb")) | .browser_download_url') -O bat.deb
+sudo dpkg -i bat.deb
+rm -rf bat.deb
 git clone --depth 1 https://github.com/junegunn/fzf.git
 cd fzf
 ./install --bin
-cd ..
+sudo mv ~/fzf/bin/fzf /usr/local/bin
+cd ~
 rm -rf fzf
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
