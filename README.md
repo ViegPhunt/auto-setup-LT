@@ -11,13 +11,7 @@ sudo pacman -Syu --noconfirm
 bash -c "$(curl -fSL https://bit.ly/aslt-arch-sh)"
 ```
 
-### Kali Linux
-```
-sudo apt update && sudo apt upgrade -y
-bash -c "$(curl -fSL https://bit.ly/aslt-kali-sh)"
-```
-
-### Ubuntu
+### Ubuntu and Debian
 ```
 sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://bit.ly/aslt-ubuntu-sh)"
