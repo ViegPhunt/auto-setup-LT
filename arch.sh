@@ -56,6 +56,7 @@ sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/ar
 sudo chmod a+wx config.jsonc
 cd ~
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.tmux.conf -O .tmux.conf
+sudo chmod a+wx .tmux.conf
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
