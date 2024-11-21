@@ -38,6 +38,8 @@ cd ~/.config/fastfetch
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/fedora.jsonc -O config.jsonc
 sudo chmod a+wx config.jsonc
 cd ~
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.tmux.conf -O .tmux.conf
+sudo chmod a+wx .tmux.conf
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
@@ -45,6 +47,9 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 
 echo "Download Fastfetch"
 sudo dnf install fastfetch -y
+
+echo "Config Tmux"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Config Zsh"
 sudo dnf install zsh -y
