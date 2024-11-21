@@ -5,16 +5,22 @@ This script automates setup my Linux Terminal
 Make sure you used **Nerd Fonts**
 
 ## Installation
-### Ubuntu and Debian
-```
-sudo apt update && sudo apt upgrade -y
-bash -c "$(curl -fSL https://bit.ly/aslt-ubuntu-sh)"
-```
-
 ### Arch Linux
 ```
 sudo pacman -Syu --noconfirm
 bash -c "$(curl -fSL https://bit.ly/aslt-arch-sh)"
+```
+
+### Kali Linux
+```
+sudo apt update && sudo apt upgrade -y
+bash -c "$(curl -fSL https://bit.ly/aslt-kali-sh)"
+```
+
+### Ubuntu
+```
+sudo apt update && sudo apt upgrade -y
+bash -c "$(curl -fSL https://bit.ly/aslt-ubuntu-sh)"
 ```
 
 ### Fedora
