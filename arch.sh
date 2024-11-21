@@ -55,6 +55,7 @@ cd ~/.config/fastfetch
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/arch.jsonc -O config.jsonc
 sudo chmod a+wx config.jsonc
 cd ~
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.tmux.conf -O .tmux.conf
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
@@ -62,6 +63,9 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 
 echo "Download Fastfetch"
 sudo pacman -S fastfetch --noconfirm
+
+echo "Config Tmux"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Config Zsh"
 sudo pacman -S zsh --noconfirm
