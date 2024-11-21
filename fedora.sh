@@ -49,6 +49,7 @@ echo "Download Fastfetch"
 sudo dnf install fastfetch -y
 
 echo "Config Tmux"
+echo "Go into Tmux and use ctrl+b and ctrl+shift+i to apply plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Config Zsh"
