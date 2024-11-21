@@ -66,6 +66,7 @@ echo "Download Fastfetch"
 sudo pacman -S fastfetch --noconfirm
 
 echo "Config Tmux"
+echo "Go into Tmux and use ctrl+b and Ctrl+Shift+i to apply plugins"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Config Zsh"
