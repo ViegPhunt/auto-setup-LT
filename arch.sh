@@ -20,7 +20,7 @@ cd yay
 makepkg -si --noconfirm
 cd ~
 rm -rf ~/yay
-sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip curl wget dpkg fzf eza bat neovim
+sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip curl wget dpkg fzf eza bat neovim python3 nodejs npm ripgrep
 git clone https://gitlab.com/jallbrit/cbonsai
 cd cbonsai
 sudo make install
@@ -52,11 +52,15 @@ sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/vi
 sudo chmod a+wx viet.omp.json
 mkdir -p ~/.config/fastfetch
 cd ~/.config/fastfetch
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/arch.jsonc -O config.jsonc
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/fastfetch.arch.jsonc -O config.jsonc
 sudo chmod a+wx config.jsonc
 cd ~
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.tmux.conf -O .tmux.conf
 sudo chmod a+wx .tmux.conf
+mkdir -p ~/.config/nvim
+cd ~/.config/nvim
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/nvim.init.lua -O init.lua
+sudo chmod a+wx init.lua
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh

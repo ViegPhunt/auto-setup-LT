@@ -8,7 +8,7 @@ sudo dnf update -y
 cd ~
 
 echo "Download some terminal tool"
-sudo dnf install -y perl-Image-ExifTool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf eza bat neovim
+sudo dnf install -y perl-Image-ExifTool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf eza bat neovim python3 nodejs npm ripgrep
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
@@ -35,11 +35,15 @@ sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/vi
 sudo chmod a+wx viet.omp.json
 mkdir -p ~/.config/fastfetch
 cd ~/.config/fastfetch
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/fedora.jsonc -O config.jsonc
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/fastfetch.fedora.jsonc -O config.jsonc
 sudo chmod a+wx config.jsonc
 cd ~
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.tmux.conf -O .tmux.conf
 sudo chmod a+wx .tmux.conf
+mkdir -p ~/.config/nvim
+cd ~/.config/nvim
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/nvim.init.lua -O init.lua
+sudo chmod a+wx init.lua
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh

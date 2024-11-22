@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y
 cd ~
 
 echo "Download some terminal tool"
-sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg jq neovim
+sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg jq neovim python3 nodejs npm ripgrep
 sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat-musl_.*amd64.deb")) | .browser_download_url') -O bat.deb
 sudo dpkg -i bat.deb
 rm -rf bat.deb
@@ -44,11 +44,15 @@ sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/vi
 sudo chmod a+wx viet.omp.json
 mkdir -p ~/.config/fastfetch
 cd ~/.config/fastfetch
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/ubuntu.jsonc -O config.jsonc
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/fastfetch.ubuntu.jsonc -O config.jsonc
 sudo chmod a+wx config.jsonc
 cd ~
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.tmux.conf -O .tmux.conf
 sudo chmod a+wx .tmux.conf
+mkdir -p ~/.config/nvim
+cd ~/.config/nvim
+sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/nvim.init.lua -O init.lua
+sudo chmod a+wx init.lua
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
