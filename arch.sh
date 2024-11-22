@@ -61,6 +61,7 @@ mkdir -p ~/.config/nvim
 cd ~/.config/nvim
 sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/nvim.init.lua -O init.lua
 sudo chmod a+wx init.lua
+cd ~
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
