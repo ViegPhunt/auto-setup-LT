@@ -154,7 +154,7 @@ require('dashboard').setup({
                 desc = 'Find File               ',
                 desc_hl = 'String',
                 key = 'f',
-                action = 'lua vim.cmd("cd ~/ | silent Telescope find_files hidden=true no_ignore=true")'
+                action = 'lua vim.cmd("silent Telescope find_files hidden=true no_ignore=true")'
             },
             {
                 icon = '  ',
