@@ -84,7 +84,7 @@ local plugins = {
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
-    }
+    },
     -- LSPconfig
     {
         "williamboman/mason.nvim",
