@@ -1,9 +1,9 @@
 -- Create by VietPQ
 
 -- Setup Neovim
-vim.opt.number = true   -- Display line numbers
-vim.opt.wrap = false    -- Disable wrap line
-vim.opt.sidescroll = 1  -- Scroll 1-char horizontally
+vim.opt.number = true       -- Display line numbers
+vim.opt.wrap = false        -- Disable wrap line
+vim.opt.sidescroll = 1      -- Scroll 1-char horizontally
 vim.opt.sidescrolloff = 5   -- Keep 5-char margin
 -- Set tab = 4 space
 vim.opt.expandtab = true
@@ -115,10 +115,10 @@ require("lazy").setup(plugins, opts)
 
 -- Setup dracula theme
 require("dracula").setup({
-    transparent_bg = true,  -- Set transparent background
-    italic_comment = true,  -- Set italic comment
+    transparent_bg = true,    -- Set transparent background
+    italic_comment = true,    -- Set italic comment
 })
-vim.cmd.colorscheme "dracula"   -- Set dracula theme
+vim.cmd.colorscheme "dracula"    -- Set dracula theme
 
 -- Setup dashboard-nvim
 require('dashboard').setup({
@@ -214,7 +214,7 @@ require("lualine").setup({
 
 -- Setup telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})    -- Ctrl p
+vim.keymap.set('n', '<C-p>', builtin.find_files, {})        -- Ctrl p
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})    -- Space f g
 require("telescope").setup({
     extensions = {
@@ -246,9 +246,9 @@ config.setup({
 require("neo-tree").setup({
     filesystem = {
         filtered_items = {
-            visible = true, -- Show hidden file
-            hide_dotfiles = false, -- Show dotfile
-            hide_gitignored = true, -- Show git ignore file
+            visible = true,            -- Show hidden file
+            hide_dotfiles = false,     -- Show dotfile
+            hide_gitignored = true,    -- Show git ignore file
         },
     },
     window = {
@@ -260,7 +260,7 @@ vim.keymap.set('n', '<C-E>', ':Neotree filesystem reveal left<CR>', {})    -- Ct
 -- Setup lspconfig
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls" }, -- Lua, C/C++, Python, JavaScript
+    ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls" },    -- Lua, C/C++, Python, JavaScript
 })
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require("lspconfig")
@@ -284,25 +284,25 @@ lspconfig.ts_ls.setup({
     capabilities = capabilities,
 })
 
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})    -- Shift k
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})    -- g d
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})                   -- Shift k
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})             -- g d
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})    -- Space c a
 
 -- Setup null-ls
 local null_ls = require("null-ls")
 null_ls.setup({
     source = {
-        null_ls.builtins.formatting.stylua, -- Lua
-        null_ls.builtins.formatting.clang_format, -- C/C++
-        null_ls.builtins.formatting.black, -- Python
-        null_ls.builtins.formatting.prettier, -- JavaScript
+        null_ls.builtins.formatting.stylua,         -- Lua
+        null_ls.builtins.formatting.clang_format,   -- C/C++
+        null_ls.builtins.formatting.black,          -- Python
+        null_ls.builtins.formatting.prettier,       -- JavaScript
     }
 })
 vim.keymap.set('n', '<A-F>', vim.lsp.buf.format, {})    -- Alt Shift f
 
 -- Setup autocomplete
 require("luasnip.loaders.from_vscode").lazy_load()
-local cmp = require'cmp'
+local cmp = require("cmp")
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -318,12 +318,12 @@ cmp.setup({
         ['<C-d>'] = cmp.mapping.scroll_docs(4),     -- Ctrl d
         ['<C-Space>'] = cmp.mapping.complete(),     -- Ctrl Space
         ['<C-e>'] = cmp.mapping.abort(),            -- Ctrl e
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
         -- { name = 'nvim_lsp' },
         { name = 'luasnip' },
     }, {
         { name = 'buffer' },
-    })
+    }),
 })
