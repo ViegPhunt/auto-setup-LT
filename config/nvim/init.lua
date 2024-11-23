@@ -80,6 +80,11 @@ local plugins = {
             "MunifTanjim/nui.nvim",
         },
     },
+    -- Autopairs
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+    }
     -- LSPconfig
     {
         "williamboman/mason.nvim",
@@ -256,6 +261,9 @@ require("neo-tree").setup({
     },
 })
 vim.keymap.set('n', '<C-E>', ':Neotree filesystem reveal left<CR>', {})    -- Ctrl Shift e
+
+-- Setup autopairs
+require('nvim-autopairs').setup{}
 
 -- Setup lspconfig
 require("mason").setup()
