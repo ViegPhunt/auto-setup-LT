@@ -244,10 +244,6 @@ config.setup({
 
 -- Setup neo-tree
 require("neo-tree").setup({
-    source_selector = {
-        winbar = false,
-        statusline = false,
-    },
     filesystem = {
         filtered_items = {
             visible = true, -- Show hidden file
@@ -259,7 +255,7 @@ require("neo-tree").setup({
         width = 25, -- Set width window neotree (default 40)
     },
 })
-vim.keymap.set('n', '<C-E>', ':Neotree filesystem reveal<CR>', {})
+vim.keymap.set('n', '<C-E>', ':Neotree filesystem reveal left<CR>', {})
 
 -- Setup lspconfig
 require("mason").setup()
