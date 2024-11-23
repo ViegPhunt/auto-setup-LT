@@ -214,8 +214,8 @@ require("lualine").setup({
 
 -- Setup telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<C-p>', builtin.find_files, {})    -- Ctrl p
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})    -- Space f g
 require("telescope").setup({
     extensions = {
         ["ui-select"] = {
@@ -237,7 +237,7 @@ require("telescope").load_extension("ui-select")
 -- Setup treesitter
 local config = require("nvim-treesitter.configs")
 config.setup({
-    ensure_installed = { "lua", "c", "cpp", "python", "javascript", "java" },
+    auto_install = true,
     highlight = { enable = true },
     indent = { enable = true },
 })
@@ -255,7 +255,7 @@ require("neo-tree").setup({
         width = 25, -- Set width window neotree (default 40)
     },
 })
-vim.keymap.set('n', '<C-E>', ':Neotree filesystem reveal left<CR>', {})
+vim.keymap.set('n', '<C-E>', ':Neotree filesystem reveal left<CR>', {})    -- Ctrl Shift e
 
 -- Setup lspconfig
 require("mason").setup()
@@ -284,9 +284,9 @@ lspconfig.ts_ls.setup({
     capabilities = capabilities,
 })
 
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})    -- Shift k
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})    -- g d
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})    -- Space c a
 
 -- Setup null-ls
 local null_ls = require("null-ls")
@@ -298,7 +298,7 @@ null_ls.setup({
         null_ls.builtins.formatting.prettier, -- JavaScript
     }
 })
-vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, {})
+vim.keymap.set('n', '<A-F>', vim.lsp.buf.format, {})    -- Alt Shift f
 
 -- Setup autocomplete
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -314,10 +314,10 @@ cmp.setup({
         documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-d>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),    -- Ctrl u
+        ['<C-d>'] = cmp.mapping.scroll_docs(4),     -- Ctrl d
+        ['<C-Space>'] = cmp.mapping.complete(),     -- Ctrl Space
+        ['<C-e>'] = cmp.mapping.abort(),            -- Ctrl e
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
