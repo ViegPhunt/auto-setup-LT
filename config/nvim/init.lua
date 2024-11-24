@@ -11,8 +11,13 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
--- Setup color
+-- Set color
 vim.opt.termguicolors = true
+-- Set move line
+vim.keymap.set("v", "<A-Down>", ":m '>+1<CR>gv=gv", {})    -- Move line in Visual mode
+vim.keymap.set("v", "<A-Up>", ":m '<-2<CR>gv=gv", {})      -- Move line in Visual mode
+vim.keymap.set("n", "<A-Down>", ":m .+1<CR>", {})          -- Move line in Normal and Insert mode
+vim.keymap.set("n", "<A-Up>", ":m .-2<CR>", {})            -- Move line in Normal and Insert mode
 
 
 -- Bootstrap lazy.nvim
