@@ -20,7 +20,7 @@ cd yay
 makepkg -si --noconfirm
 cd ~
 rm -rf ~/yay
-sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip curl wget dpkg fzf eza bat neovim python3 nodejs npm ripgrep
+sudo pacman -S --noconfirm perl-image-exiftool make tmux btop cmatrix cowsay unzip curl wget dpkg fzf eza bat neovim python3 nodejs npm ripgrep netcat
 git clone https://gitlab.com/jallbrit/cbonsai
 cd cbonsai
 sudo make install
