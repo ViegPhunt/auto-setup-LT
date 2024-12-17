@@ -44,24 +44,9 @@ cd ..
 rm -rf ~/pokemon-colorscripts
 
 echo 'Download file config'
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.zshrc -O .zshrc
-sudo chmod a+wx .zshrc
-mkdir ~/.poshthemes
-cd ~/.poshthemes
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/viet.omp.json -O viet.omp.json
-sudo chmod a+wx viet.omp.json
-mkdir -p ~/.config/fastfetch
-cd ~/.config/fastfetch
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/fastfetch.arch.jsonc -O config.jsonc
-sudo chmod a+wx config.jsonc
-cd ~
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/config.tmux.conf -O .tmux.conf
-sudo chmod a+wx .tmux.conf
-mkdir -p ~/.config/nvim
-cd ~/.config/nvim
-sudo wget https://github.com/vietpq685/auto-setup-LT/releases/latest/download/nvim.init.lua -O init.lua
-sudo chmod a+wx init.lua
-cd ~
+git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
+mv ~/setup/dotfiles ~/dotfiles
+rm -rf setup
 
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
@@ -69,10 +54,11 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 
 echo "Download Fastfetch"
 sudo pacman -S fastfetch --noconfirm
+mv dotfiles/fastfetch/arch.jsonc dotfiles/fastfetch/config.jsonc
 
 echo "Config Tmux"
 echo "Go into Tmux and use ctrl+b and ctrl+shift+i to apply plugins"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins/tpm
 
 echo "Config Zsh"
 sudo pacman -S zsh --noconfirm
