@@ -50,10 +50,6 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 echo "Download Fastfetch"
 sudo pacman -S fastfetch --noconfirm
 
-echo "Config Tmux"
-echo "Go into Tmux and use ctrl+b and ctrl+shift+i to apply plugins"
-git clone https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
-
 echo "Config Zsh"
 sudo pacman -S zsh --noconfirm
 
@@ -62,8 +58,10 @@ git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
 mv ~/setup/dotfiles ~/dotfiles
 rm -rf setup
 mv ~/dotfiles/fastfetch/arch.jsonc ~/dotfiles/fastfetch/config.jsonc
+git clone https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
 cd dotfiles
 stow fastfetch nvim poshthemes tmux zsh
+cd ~
 
 echo 'Change shell'
 chsh -s /usr/bin/zsh
