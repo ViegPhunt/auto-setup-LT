@@ -35,11 +35,6 @@ sudo ./install.sh
 cd ..
 rm -rf ~/pokemon-colorscripts
 
-echo 'Download file config'
-git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
-mv ~/setup/dotfiles ~/dotfiles
-rm -rf setup
-
 echo "Config Oh-My-Posh"
 sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
@@ -48,11 +43,6 @@ echo "Download Fastfetch"
 sudo wget https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb -O fastfetch.deb
 sudo dpkg -i fastfetch.deb
 rm -rf ~/fastfetch.deb
-mv dotfiles/fastfetch/ubuntu.jsonc dotfiles/fastfetch/config.jsonc
-
-echo "Config Tmux"
-echo "Go into Tmux and use ctrl+b and ctrl+shift+i to apply plugins"
-git clone https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins/tpm
 
 echo "Config Zsh"
 sudo apt install -y gpg
@@ -63,4 +53,18 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 sudo apt install -y eza
 sudo apt install zsh -y
+
+echo "Download file config"
+git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
+mv ~/setup/dotfiles ~/dotfiles
+rm -rf setup
+mv ~/dotfiles/fastfetch/ubuntu.jsonc ~/dotfiles/fastfetch/config.jsonc
+git clone https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
+
+echo "Stow"
+cd dotfiles
+stow fastfetch nvim poshthemes tmux zsh
+cd ~
+
+echo 'Change shell'
 chsh -s /usr/bin/zsh
