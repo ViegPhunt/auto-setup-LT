@@ -46,6 +46,8 @@ rm -rf ~/pokemon-colorscripts
 echo 'Download file config'
 git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
 mv ~/setup/dotfiles ~/dotfiles
+cd dotfiles
+stow fastfetch nvim poshthemes tmux zsh
 rm -rf setup
 
 echo "Config Oh-My-Posh"
