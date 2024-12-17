@@ -53,12 +53,14 @@ sudo pacman -S fastfetch --noconfirm
 echo "Config Zsh"
 sudo pacman -S zsh --noconfirm
 
-echo 'Download file config'
+echo "Download file config"
 git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
 mv ~/setup/dotfiles ~/dotfiles
 rm -rf setup
 mv ~/dotfiles/fastfetch/arch.jsonc ~/dotfiles/fastfetch/config.jsonc
 git clone https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
+
+echo "Stow"
 cd dotfiles
 stow fastfetch nvim poshthemes tmux zsh
 cd ~
