@@ -8,7 +8,7 @@ sudo dnf update -y
 cd ~
 
 echo "Download some terminal tool"
-sudo dnf install -y perl-Image-ExifTool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf eza bat neovim python3 nodejs npm ripgrep
+sudo dnf install -y perl-Image-ExifTool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg fzf eza bat neovim python3 nodejs npm ripgrep stow
 git clone https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
