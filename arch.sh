@@ -14,7 +14,7 @@ echo "LANG=en_US.UTF-8" | sudo tee -a /etc/locale.conf
 export LANG=en_US.UTF-8
 
 echo "Download some terminal tool"
-sudo pacman -S --needed base-devel git
+sudo pacman -S --noconfirm --needed base-devel git
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
