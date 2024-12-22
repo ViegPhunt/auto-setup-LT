@@ -79,9 +79,13 @@ elif [ -f "$realpath" ]; then
     bat -n --color=always --line-range :500 "$realpath"
 fi
 '
+
 # Setup bat (better than cat)
 export BAT_THEME=Dracula
 alias bat='bat --paging=never'
+
+# Setup zoxide (better than cd)
+eval "$(zoxide init zsh)"
 
 
 
