@@ -24,9 +24,12 @@ sudo make install
 cd ..
 rm -rf pipes.sh
 
-echo "Download gdb-gef"
+echo "Download pwndbg"
 sudo apt install gdb -y
-bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
+git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+./setup.sh
+cd ..
 
 echo "Download pokemon-colorscripts"
 git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
