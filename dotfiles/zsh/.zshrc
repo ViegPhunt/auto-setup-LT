@@ -22,7 +22,10 @@ setopt sharehistory
 alias ls='eza --icons --color=always'
 alias lt='eza -a --tree --level=1 --icons --color=always'
 alias grep='grep --color=always'
+
+# Set-up alias
 alias vim='nvim'
+alias cbonsai='cbonsai -l -i -w 1'
 
 bindkey -e
 
