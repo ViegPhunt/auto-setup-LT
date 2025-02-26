@@ -18,12 +18,13 @@ rm -rf pipes.sh
 echo "Allow pip3 install by removing EXTERNALLY-MANAGED file"
 sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
 
-echo "Download pwndbg"
-sudo dnf install gdb -y
+echo "Download pwndbg and pwntools"
+sudo pacman -S gdb --noconfirm
 git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
 ./setup.sh
 cd ..
+pip3 install pwntools
 
 echo "Download pokemon-colorscripts"
 git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
