@@ -1,8 +1,14 @@
 # Auto Setup Linux Terminal
 This script automates setup my Linux Terminal
 
-### Necessary
+## Necessary
 Make sure you used **Nerd Fonts**
+
+
+## Visuals
+### Screenshots
+![screenshot](./demo_images/screenshot-1.png)
+
 
 ## Installation
 ### Arch Linux
