@@ -19,7 +19,7 @@ echo "Allow pip3 install by removing EXTERNALLY-MANAGED file"
 sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
 
 echo "Download pwndbg and pwntools"
-sudo pacman -S gdb --noconfirm
+sudo dnf install gdb -y
 git clone https://github.com/pwndbg/pwndbg
 cd pwndbg
 ./setup.sh
