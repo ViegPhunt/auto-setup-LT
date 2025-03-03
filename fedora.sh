@@ -45,7 +45,7 @@ sudo dnf install zsh -y
 
 echo "Download file config"
 git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
-mv ~/setup/dotfiles ~/dotfiles
+mkdir -p ~/dotfiles && mv ~/setup/dotfiles/* ~/dotfiles/
 rm -rf setup
 mv ~/dotfiles/fastfetch/.config/fastfetch/fedora.jsonc ~/dotfiles/fastfetch/.config/fastfetch/config.jsonc
 git clone https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
