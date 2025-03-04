@@ -9,7 +9,7 @@ cd ~
 
 echo "Download some terminal tool"
 sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg jq zoxide neovim python3 python3-pip nodejs npm ripgrep stow
-sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat-musl_.*amd64.deb")) | .browser_download_url') -O bat.deb
+sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat_.*amd64.deb")) | .browser_download_url') -O bat.deb
 sudo dpkg -i bat.deb
 rm -rf bat.deb
 git clone --depth 1 https://github.com/junegunn/fzf.git
