@@ -19,6 +19,6 @@ return {
                 width = 25, -- Set width window neotree (default 40)
             },
         })
-        vim.keymap.set('n', '<C-E>', ':Neotree filesystem reveal left<CR>', {})    -- Ctrl Shift e
+        vim.keymap.set('n', '<C-S-e>', ':Neotree filesystem reveal left<CR>', {})    -- Ctrl Shift e
     end
 }
