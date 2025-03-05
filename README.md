@@ -20,17 +20,17 @@ This script automates setup my Linux Terminal
 ### Arch Linux
 ```
 sudo pacman -Syu --noconfirm
-bash -c "$(curl -fSL https://bit.ly/aslt-arch-sh)"
+bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/arch.sh)"
 ```
 
 ### Ubuntu and Debian
 ```
 sudo apt update && sudo apt upgrade -y
-bash -c "$(curl -fSL https://bit.ly/aslt-ubuntu-sh)"
+bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/ubuntu.sh)"
 ```
 
 ### Fedora
 ```
 sudo dnf update -y
-bash -c "$(curl -fSL https://bit.ly/aslt-fedora-sh)"
+bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/fedora.sh)"
 ```
