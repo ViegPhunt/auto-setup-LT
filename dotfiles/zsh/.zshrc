@@ -1,4 +1,4 @@
-# Created by VietPQ
+# Created by Phunt_Vieg_
 # Created by newuser for 5.9
 # autoload -Uz zsh-newuser-install
 # zsh-newuser-install -f# Lines configured by zsh-newuser-install

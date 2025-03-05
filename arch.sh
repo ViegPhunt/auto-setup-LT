@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 echo "WELCOME! Now we will customize Arch Terminal"
-echo "Created by VietPQ"
+echo "Created by Phunt_Vieg_"
 
 sudo pacman -Syu --noconfirm
 
@@ -61,7 +61,7 @@ echo "Config Zsh"
 sudo pacman -S zsh --noconfirm
 
 echo "Download file config"
-git clone https://github.com/vietpq685/auto-setup-LT.git ~/setup
+git clone https://github.com/ViegPhunt/auto-setup-LT.git ~/setup
 mkdir -p ~/dotfiles && mv ~/setup/dotfiles/* ~/dotfiles/
 rm -rf setup
 mv ~/dotfiles/fastfetch/.config/fastfetch/arch.jsonc ~/dotfiles/fastfetch/.config/fastfetch/config.jsonc
