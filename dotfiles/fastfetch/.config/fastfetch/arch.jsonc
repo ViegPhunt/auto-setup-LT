@@ -17,7 +17,7 @@
     "shell",
     {
       "type": "display",
-      "format": "{1}x{2} @ 165Hz"
+      "format": "{1}x{2} @ {3}Hz"
     },
     "cpu",
     {
