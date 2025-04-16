@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y
 cd ~
 
 echo "Download some terminal tool"
-sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg eza jq zoxide neovim python3 python3-pip nodejs npm ripgrep stow
+sudo apt install -y exiftool make tmux btop cmatrix cbonsai cowsay unzip curl wget dpkg eza jq zoxide python3 python3-pip nodejs npm ripgrep stow
 sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat_.*amd64.deb")) | .browser_download_url') -O bat.deb
 sudo dpkg -i bat.deb
 rm -rf bat.deb
@@ -23,6 +23,12 @@ cd pipes.sh
 sudo make install
 cd ..
 rm -rf pipes.sh
+
+echo "Install neovim"
+cd ~
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 
 echo "Allow pip3 install by removing EXTERNALLY-MANAGED file"
 sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
