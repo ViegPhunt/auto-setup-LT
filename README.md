@@ -2,9 +2,9 @@
 This script automates setup my Linux Terminal
 
 ## Table of Contents
-- [Necessary](https://github.com/ViegPhunt/auto-setup-LT/edit/main/README.md#Necessary)
-- [Visuals](https://github.com/ViegPhunt/auto-setup-LT/edit/main/README.md#Visuals)
-- [Installation](https://github.com/ViegPhunt/auto-setup-LT/edit/main/README.md#Installation)
+- [Necessary](https://github.com/ViegPhunt/auto-setup-LT/blob/main/README.md#Necessary)
+- [Visuals](https://github.com/ViegPhunt/auto-setup-LT/blob/main/README.md#visuals)
+- [Installation](https://github.com/ViegPhunt/auto-setup-LT/blob/main/README.md#Installation)
 
 ## Necessary
 > [!IMPORTANT]
