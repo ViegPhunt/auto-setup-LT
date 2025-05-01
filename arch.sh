@@ -69,6 +69,7 @@ echo "Stow"
 cd ~/dotfiles
 rm -rf .git README.md
 stow -t ~ .
+cd ~
 
 echo 'Change shell'
 chsh -s /usr/bin/zsh
