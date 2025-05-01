@@ -5,6 +5,8 @@ This script automates setup my Linux Terminal
 - [Necessary](#Necessary)
 - [Visuals](#Visuals)
 - [Installation](#Installation)
+  - [Arch Linux](#Arch-Linux)
+  - [Ubuntu and Debian](#Ubuntu-and-Debian)
 
 ## Necessary
 > [!IMPORTANT]
