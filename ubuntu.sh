@@ -18,7 +18,7 @@ cd fzf
 sudo mv ~/fzf/bin/fzf /usr/local/bin
 cd ~
 rm -rf fzf
-git clone https://github.com/pipeseroni/pipes.sh.git
+git clone --depth 1 https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
 cd ..
@@ -35,14 +35,14 @@ sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.m
 
 echo "Download pwndbg and pwntools"
 sudo apt install gdb -y
-git clone https://github.com/pwndbg/pwndbg
+git clone --depth 1 https://github.com/pwndbg/pwndbg
 cd pwndbg
 ./setup.sh
 cd ..
 pip3 install pwntools
 
 echo "Download pokemon-colorscripts"
-git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
+git clone --depth 1 https://gitlab.com/phoneybadger/pokemon-colorscripts.git
 cd pokemon-colorscripts
 sudo ./install.sh
 cd ..
@@ -61,16 +61,15 @@ echo "Config Zsh"
 sudo apt install zsh -y
 
 echo "Download file config"
-git clone https://github.com/ViegPhunt/auto-setup-LT.git ~/setup
+git clone --depth 1 https://github.com/ViegPhunt/auto-setup-LT.git ~/setup
 mkdir -p ~/dotfiles && mv ~/setup/dotfiles/* ~/dotfiles/
 rm -rf setup
-mv ~/dotfiles/fastfetch/.config/fastfetch/ubuntu.jsonc ~/dotfiles/fastfetch/.config/fastfetch/config.jsonc
-git clone https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
+mv ~/dotfiles/.config/fastfetch/ubuntu.jsonc ~/dotfiles/.config/fastfetch/config.jsonc
+git clone --depth 1 https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
 
 echo "Stow"
-cd dotfiles
-stow fastfetch nvim poshthemes tmux zsh
 cd ~
+stow dotfiles
 
 echo 'Change shell'
 chsh -s /usr/bin/zsh

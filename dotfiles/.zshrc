@@ -103,4 +103,4 @@ fi
 
 # fastfetch
 # pokemon-colorscripts --no-title -s -r
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/viet.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/viet.omp.json)"
