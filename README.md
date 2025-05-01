@@ -18,6 +18,9 @@ This script automates setup my Linux Terminal
 > [!NOTE]
 > This script does not include package uninstallation, as some packages may have already been installed on your system by default. Creating a package uninstallation script could potentially affect your previous system.
 
+> [!NOTE]
+> This is my dotfiles repo: [`dotfiles`](https://github.com/ViegPhunt/Dotfiles)
+
 ## Visuals
 ### Screenshots
 ![screenshot](./demo_images/screenshot-1.png)
