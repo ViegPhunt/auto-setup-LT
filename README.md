@@ -1,6 +1,11 @@
 # Auto Setup Linux Terminal
 This script automates setup my Linux Terminal
 
+## Table of Contents
+- [Necessary](https://github.com/ViegPhunt/auto-setup-LT/edit/main/README.md#Necessary)
+- [Visuals](https://github.com/ViegPhunt/auto-setup-LT/edit/main/README.md#Visuals)
+- [Installation](https://github.com/ViegPhunt/auto-setup-LT/edit/main/README.md#Installation)
+
 ## Necessary
 > [!IMPORTANT]
 > Make sure you used **Nerd Fonts**
