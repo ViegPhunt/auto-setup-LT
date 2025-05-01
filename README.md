@@ -28,9 +28,3 @@ bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/m
 sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/ubuntu.sh)"
 ```
-
-### Fedora
-```
-sudo dnf update -y
-bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/fedora.sh)"
-```
