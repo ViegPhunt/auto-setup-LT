@@ -61,15 +61,14 @@ echo "Config Zsh"
 sudo pacman -S zsh --noconfirm
 
 echo "Download file config"
-git clone --depth 1 https://github.com/ViegPhunt/auto-setup-LT.git ~/setup
-mkdir -p ~/dotfiles && mv ~/setup/dotfiles/* ~/dotfiles/
-rm -rf setup
+git clone --depth 1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
 mv ~/dotfiles/.config/fastfetch/arch.jsonc ~/dotfiles/.config/fastfetch/config.jsonc
 git clone --depth 1 https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins/tpm
 
 echo "Stow"
-cd ~
-stow dotfiles
+cd ~/dotfiles
+rm -rf .git README.md
+stow -t ~ .
 
 echo 'Change shell'
 chsh -s /usr/bin/zsh
