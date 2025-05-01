@@ -63,7 +63,7 @@ sudo apt install zsh -y
 echo "Download file config"
 git clone --depth 1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
 mv ~/dotfiles/.config/fastfetch/ubuntu.jsonc ~/dotfiles/.config/fastfetch/config.jsonc
-git clone --depth 1 https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/.tmux/plugins/tpm
+git clone --depth 1 https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins/tpm
 
 echo "Stow"
 cd ~/dotfiles
