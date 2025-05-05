@@ -10,7 +10,7 @@ cd ~
 echo "==> Updating system packages..."
 sudo pacman -Syu --noconfirm
 
-echo '==> Setting locale'
+echo "==> Setting locale"
 echo "en_US.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
 sudo locale-gen
 echo "LANG=en_US.UTF-8" | sudo tee -a /etc/locale.conf
@@ -74,5 +74,5 @@ rm -rf .git README.md
 stow -t ~ .
 cd ~
 
-echo '==> Change shell'
+echo "==> Change shell"
 chsh -s /usr/bin/zsh
