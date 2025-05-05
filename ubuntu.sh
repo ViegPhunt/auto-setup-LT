@@ -1,7 +1,5 @@
 #!/bin/bash
 
-clear
-
 echo "==> WELCOME! Now we will customize Ubuntu Terminal"
 echo "==> Created by Phunt_Vieg_"
 
