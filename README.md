@@ -1,5 +1,5 @@
 # Auto Setup Linux Terminal
-This script automates setup my Linux Terminal
+This script automates setup of my Linux Terminal
 
 ## Table of Contents
 - [Necessary](#Necessary)
@@ -8,7 +8,7 @@ This script automates setup my Linux Terminal
   - [Arch Linux](#Arch-Linux)
   - [Ubuntu and Debian](#Ubuntu-and-Debian)
 
-## Necessary
+## Important Notes
 > [!IMPORTANT]
 > Make sure you used **Nerd Fonts**
 
@@ -16,7 +16,7 @@ This script automates setup my Linux Terminal
 > Install a backup tool and create a system backup before using this script.
 
 > [!NOTE]
-> This script does not include package uninstallation, as some packages may have already been installed on your system by default. Creating a package uninstallation script could potentially affect your previous system.
+> This script does not include package uninstallation, as some packages may already exist on your system by default. Creating an uninstallation script could potentially affect your current setup.
 
 > [!NOTE]
 > This is my dotfiles repo: [`dotfiles`](https://github.com/ViegPhunt/Dotfiles)
