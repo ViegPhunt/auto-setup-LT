@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 echo "WELCOME! Now we will customize Arch Terminal"
 echo "Created by Phunt_Vieg_"
