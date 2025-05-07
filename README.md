@@ -2,11 +2,14 @@
 This script automates setup of my Linux Terminal
 
 ## Table of Contents
-- [Necessary](#Necessary)
-- [Visuals](#Visuals)
-- [Installation](#Installation)
-  - [Arch Linux](#Arch-Linux)
-  - [Ubuntu and Debian](#Ubuntu-and-Debian)
+- [Auto Setup Linux Terminal](#auto-setup-linux-terminal)
+  - [Table of Contents](#table-of-contents)
+  - [Important Notes](#important-notes)
+  - [Visuals](#visuals)
+    - [Screenshots](#screenshots)
+  - [Installation](#installation)
+    - [Arch Linux](#arch-linux)
+    - [Ubuntu and Debian](#ubuntu-and-debian)
 
 ## Important Notes
 > [!IMPORTANT]
@@ -23,8 +26,8 @@ This script automates setup of my Linux Terminal
 
 ## Visuals
 ### Screenshots
-![screenshot](./demo_images/screenshot-1.png)
-
+![screenshot1](./demo_images/screenshot-1.png)
+![screenshot2](./demo_images/screenshot-2.png)
 
 ## Installation
 ### Arch Linux
