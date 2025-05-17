@@ -5,7 +5,7 @@ This script automates setup of my Linux Terminal
 - [Auto Setup Linux Terminal](#auto-setup-linux-terminal)
   - [Table of Contents](#table-of-contents)
   - [Important Notes](#important-notes)
-  - [Demo](#demo)
+  - [Preview](#preview)
     - [Screenshots](#screenshots)
   - [Installation](#installation)
     - [Arch Linux](#arch-linux)
@@ -24,10 +24,10 @@ This script automates setup of my Linux Terminal
 > [!NOTE]
 > This is my dotfiles repo: [`dotfiles`](https://github.com/ViegPhunt/Dotfiles)
 
-## Demo
+## Preview
 ### Screenshots
-![screenshot1](./demo/screenshot-1.png)
-![screenshot2](./demo/screenshot-2.png)
+![screenshot1](./assets/screenshots/screenshot-1.png)
+![screenshot2](./assets/screenshots/screenshot-2.png)
 
 ## Installation
 ### Arch Linux
