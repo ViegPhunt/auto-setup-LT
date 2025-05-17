@@ -26,8 +26,8 @@ This script automates setup of my Linux Terminal
 
 ## Demo
 ### Screenshots
-![screenshot1](./demo_images/screenshot-1.png)
-![screenshot2](./demo_images/screenshot-2.png)
+![screenshot1](./demo/screenshot-1.png)
+![screenshot2](./demo/screenshot-2.png)
 
 ## Installation
 ### Arch Linux
