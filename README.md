@@ -5,7 +5,7 @@ This script automates setup of my Linux Terminal
 - [Auto Setup Linux Terminal](#auto-setup-linux-terminal)
   - [Table of Contents](#table-of-contents)
   - [Important Notes](#important-notes)
-  - [Visuals](#demo)
+  - [Demo](#demo)
     - [Screenshots](#screenshots)
   - [Installation](#installation)
     - [Arch Linux](#arch-linux)
