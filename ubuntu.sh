@@ -74,4 +74,3 @@ cd ~
 
 echo "==> Change shell"
 chsh -s /usr/bin/zsh
-exec zsh
