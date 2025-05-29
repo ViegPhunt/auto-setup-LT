@@ -77,13 +77,6 @@ stow -t ~ .
 cd ~
 
 
-echo "==> Change shell"
-ZSH_PATH="$(which zsh)"
-grep -qxF "$ZSH_PATH" /etc/shells || echo "$ZSH_PATH" | sudo tee -a /etc/shells
-chsh -s "$ZSH_PATH"
-
-
-
 CURRENT_SHELL=$(basename "$SHELL")
 case "$CURRENT_SHELL" in
     bash) SHELL_RC="$HOME/.bashrc" ;;
@@ -94,9 +87,15 @@ esac
 
 echo "==> Cleaning up auto-setup line from $SHELL_RC"
 LINE='bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/setup.sh)"'
-if ! grep -Fxq "$LINE" "$SHELL_RC"; then
+if grep -Fxq "$LINE" "$SHELL_RC"; then
     sed -i "\|$LINE|d" "$SHELL_RC"
 fi
+
+
+echo "==> Change shell"
+ZSH_PATH="$(which zsh)"
+grep -qxF "$ZSH_PATH" /etc/shells || echo "$ZSH_PATH" | sudo tee -a /etc/shells
+chsh -s "$ZSH_PATH"
 
 
 
