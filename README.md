@@ -28,6 +28,7 @@ This script automates setup of my Linux Terminal
 > This is my dotfiles repo: [`dotfiles`](https://github.com/ViegPhunt/Dotfiles)
 
 ## Installation
+Just use this line in your terminal:
 ```
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/install.sh)"
 ```

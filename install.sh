@@ -14,10 +14,16 @@ case "$CURRENT_SHELL" in
     *) SHELL_RC="$HOME/.profile" ;;
 esac
 
+echo "==> Add auto-setup line to $SHELL_RC"
 LINE='bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/setup.sh)"'
 if ! grep -Fxq "$LINE" "$SHELL_RC"; then
     echo -e "\n$LINE" | tee -a "$SHELL_RC"
 fi
 
 
-echo "==> Please restart terminal."
+echo
+echo "*******************************************************"
+echo "*    Please restart your terminal (or your system)    *"
+echo "*       to apply the changes and continue setup       *"
+echo "*******************************************************"
+echo
