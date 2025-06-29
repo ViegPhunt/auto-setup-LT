@@ -7,7 +7,7 @@ This script automates setup of my Linux Terminal
 - [Important Notes](#important-notes)
 - [Installation](#installation)
   - [Arch Linux](#arch-linux)
-  - [Ubuntu and Debian](#ubuntu)
+  - [Ubuntu](#ubuntu)
 - [Dotfiles Repo](#dotfiles-repo)
 
 ## Preview
