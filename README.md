@@ -7,7 +7,7 @@ This script automates setup of my Linux Terminal
 - [Important Notes](#important-notes)
 - [Installation](#installation)
   - [Arch Linux](#arch-linux)
-  - [Ubuntu and Debian](#ubuntu-and-debian)
+  - [Ubuntu and Debian](#ubuntu)
 - [Dotfiles Repo](#dotfiles-repo)
 
 ## Preview
@@ -32,7 +32,7 @@ sudo pacman -Syu --noconfirm
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/arch.sh)"
 ```
 
-### Ubuntu and Debian
+### Ubuntu
 ```
 sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/ubuntu.sh)"
@@ -40,3 +40,6 @@ bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/m
 
 ## Dotfiles Repo
 This repo contains all my dotfiles: [`Dotfiles`](https://github.com/ViegPhunt/Dotfiles).
+
+## Feedback
+If you find this repo useful or have any suggestions, feel free to open an issue or submit a pull request.
