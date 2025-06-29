@@ -2,19 +2,18 @@
 This script automates setup of my Linux Terminal
 
 ## Table of Contents
-- [Auto Setup Linux Terminal](#auto-setup-linux-terminal)
-  - [Table of Contents](#table-of-contents)
-  - [Preview](#preview)
-    - [Screenshots](#screenshots)
-  - [Important Notes](#important-notes)
-  - [Installation](#installation)
-    - [Arch Linux](#arch-linux)
-    - [Ubuntu and Debian](#ubuntu-and-debian)
+- [Preview](#preview)
+  - [Screenshots](#screenshots)
+- [Important Notes](#important-notes)
+- [Installation](#installation)
+  - [Arch Linux](#arch-linux)
+  - [Ubuntu and Debian](#ubuntu-and-debian)
+- [Dotfiles Repo](#dotfiles-repo)
 
 ## Preview
 ### Screenshots
-![screenshot1](./assets/screenshots/screenshot-1.png)
-![screenshot2](./assets/screenshots/screenshot-2.png)
+![screenshot1](https://github.com/user-attachments/assets/4bd63580-aa3d-400e-9301-6c50b59ae8fb)
+![screenshot2](https://github.com/user-attachments/assets/1014184d-f0b7-49bb-a6f7-dfdda9236d37)
 
 ## Important Notes
 > [!IMPORTANT]
@@ -25,9 +24,6 @@ This script automates setup of my Linux Terminal
 
 > [!NOTE]
 > This script does not include package uninstallation, as some packages may already exist on your system by default. Creating an uninstallation script could potentially affect your current setup.
-
-> [!NOTE]
-> This is my dotfiles repo: [`dotfiles`](https://github.com/ViegPhunt/Dotfiles)
 
 ## Installation
 ### Arch Linux
@@ -41,3 +37,6 @@ bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/m
 sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/ubuntu.sh)"
 ```
+
+## Dotfiles Repo
+This repo contains all my dotfiles: [`Dotfiles`](https://github.com/ViegPhunt/Dotfiles).
