@@ -28,7 +28,7 @@ pkgs=(
     btop cmatrix cowsay fastfetch
 
     # Essential utilities
-    make curl wget unzip dpkg fzf eza bat zoxide neovim tmux ripgrep stow man openssh netcat
+    make curl wget unzip dpkg fzf eza bat zoxide neovim tmux ripgrep fd stow man openssh netcat
 
     # CTF tools
     perl-image-exiftool gdb
