@@ -15,7 +15,7 @@ pkgs=(
     btop cmatrix cbonsai cowsay
 
     # Essential utilities
-    make curl wget unzip jq dpkg fzf eza zoxide tmux ripgrep stow
+    make curl wget unzip jq dpkg fzf eza zoxide tmux ripgrep fd-find stow
     
     # CTF tools
     exiftool gdb
