@@ -31,7 +31,7 @@ pkgs=(
     make curl wget unzip dpkg fzf eza bat zoxide neovim tmux ripgrep fd stow man openssh netcat
 
     # CTF tools
-    perl-image-exiftool gdb
+    perl-image-exiftool gdb ascii
 
     # Programming languages
     python3 python-pip nodejs npm
