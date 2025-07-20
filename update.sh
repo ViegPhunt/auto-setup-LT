@@ -13,5 +13,5 @@ rm -rf .git README.md
 
 echo
 echo "==> Config update completed!"
-echo "==> It is recommended to RESTART terminal to apply all changes.
+echo "==> It is recommended to RESTART terminal to apply all changes."
 echo
