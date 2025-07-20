@@ -8,7 +8,7 @@ This script automates setup of my Linux Terminal
 - [Installation](#installation)
   - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
-- [Update Config](#update-config)
+- [Update Dotfiles](#update-dotfiles)
 - [Dotfiles Repo](#dotfiles-repo)
 
 ## Preview
@@ -39,7 +39,7 @@ sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/ubuntu.sh)"
 ```
 
-## Update Config
+## Update Dotfiles
 ```
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/update.sh)"
 ```
