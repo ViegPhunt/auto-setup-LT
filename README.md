@@ -39,6 +39,12 @@ sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/ubuntu.sh)"
 ```
 
+### Kali Linux
+```
+sudo apt update && sudo apt upgrade -y
+bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/kali.sh)"
+```
+
 ## Update Dotfiles
 ```
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/update.sh)"
