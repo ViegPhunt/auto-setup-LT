@@ -23,7 +23,7 @@ makepkg -si --noconfirm
 cd ~
 rm -rf ~/yay
 
-pkgs=(
+pacman_packages=(
     # System monitoring and fun terminal visuals
     btop cmatrix cowsay fastfetch
 
@@ -39,18 +39,12 @@ pkgs=(
     # Shell & customization
     zsh
 )
-sudo pacman -S --noconfirm "${pkgs[@]}"
-
-git clone --depth=1 https://gitlab.com/jallbrit/cbonsai
-cd cbonsai
-sudo make install
-cd ..
-rm -rf cbonsai
-git clone --depth=1 https://github.com/pipeseroni/pipes.sh.git
-cd pipes.sh
-sudo make install
-cd ..
-rm -rf pipes.sh
+aur_packages=(
+    # System monitoring and fun terminal visuals
+    cbonsai pipes.sh pokemon-colorscripts-git oh-my-posh
+)
+sudo pacman -S --noconfirm "${pacman_packages[@]}"
+yay -S --noconfirm "${aur_packages[@]}"
 
 echo "==> Allow pip3 install by removing EXTERNALLY-MANAGED file"
 sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
@@ -61,17 +55,6 @@ cd pwndbg
 ./setup.sh
 cd ..
 pip3 install pwntools
-
-echo "==> Download pokemon-colorscripts"
-git clone --depth=1 https://gitlab.com/phoneybadger/pokemon-colorscripts.git
-cd pokemon-colorscripts
-sudo ./install.sh
-cd ..
-rm -rf ~/pokemon-colorscripts
-
-echo "==> Config Oh-My-Posh"
-sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
-sudo chmod +x /usr/local/bin/oh-my-posh
 
 echo "==> Download file config"
 git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
