@@ -10,14 +10,12 @@ echo "==> Updating system packages..."
 sudo apt update && sudo apt upgrade -y
 
 echo "==> Download some terminal tool"
-sudo add-apt-repository ppa:neovim-ppa/unstable -y
-sudo apt update
 pkgs=(
     # System monitoring and fun terminal visuals
     btop cmatrix cbonsai cowsay
 
     # Essential utilities
-    make curl wget unzip jq dpkg fzf eza zoxide neovim tmux ripgrep fd-find stow
+    make curl wget unzip jq dpkg fzf eza zoxide tmux ripgrep fd-find stow
     
     # CTF tools
     exiftool gdb ascii
@@ -30,21 +28,29 @@ pkgs=(
 )
 sudo apt install -y "${pkgs[@]}"
 
+# Install neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+# Install bat
 sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat_.*amd64.deb")) | .browser_download_url') -O bat.deb
 sudo dpkg -i bat.deb
 rm -rf bat.deb
+# Install fzf
 git clone --depth=1 https://github.com/junegunn/fzf.git
 cd fzf
 ./install --bin
 sudo mv ~/fzf/bin/fzf /usr/local/bin
 cd ~
 rm -rf fzf
+# Install pipes.sh
 git clone --depth=1 https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
 sudo make install
 cd ..
 rm -rf pipes.sh
 cd ~
+# Install fastfetch
 sudo wget https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb -O fastfetch.deb
 sudo dpkg -i fastfetch.deb
 rm -rf ~/fastfetch.deb
