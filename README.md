@@ -14,8 +14,8 @@ This script automates setup of my Linux Terminal
 
 ## Preview
 ### Screenshots
-![screenshot1](https://github.com/user-attachments/assets/ce1d7ef4-9edd-4ce7-8047-7c43e0dfc0d7)
-![screenshot2](https://github.com/user-attachments/assets/bffcde8f-e0c6-4af8-a942-bcb0dc68007f)
+![screenshot1](https://github.com/user-attachments/assets/feaef7fc-3464-41c7-a9b5-fd2883c4290e)
+![screenshot2](https://github.com/user-attachments/assets/20f92535-983f-4f3d-9772-5f79ced80a54)
 
 ## Important Notes
 > [!IMPORTANT]
