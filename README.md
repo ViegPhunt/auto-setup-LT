@@ -8,6 +8,7 @@ This script automates setup of my Linux Terminal
 - [Installation](#installation)
   - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
+  - [Kali Linux](#kali-linux)
 - [Update Dotfiles](#update-dotfiles)
 - [Dotfiles Repo](#dotfiles-repo)
 
