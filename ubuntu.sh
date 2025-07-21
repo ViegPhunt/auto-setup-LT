@@ -10,12 +10,14 @@ echo "==> Updating system packages..."
 sudo apt update && sudo apt upgrade -y
 
 echo "==> Download some terminal tool"
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
 pkgs=(
     # System monitoring and fun terminal visuals
     btop cmatrix cbonsai cowsay
 
     # Essential utilities
-    make curl wget unzip jq dpkg fzf eza zoxide tmux ripgrep fd-find stow
+    make curl wget unzip jq dpkg fzf eza zoxide neovim tmux ripgrep fd-find stow
     
     # CTF tools
     exiftool gdb ascii
@@ -43,9 +45,6 @@ sudo make install
 cd ..
 rm -rf pipes.sh
 cd ~
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
-sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 sudo wget https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb -O fastfetch.deb
 sudo dpkg -i fastfetch.deb
 rm -rf ~/fastfetch.deb
