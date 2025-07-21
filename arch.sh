@@ -62,7 +62,7 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins
 
 echo "==> Stow"
 cd ~/dotfiles
-rm -rf .git README.md
+rm -rf .git README.md LICENSE
 stow -t ~ .
 cd ~
 
