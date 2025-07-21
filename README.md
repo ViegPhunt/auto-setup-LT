@@ -9,7 +9,6 @@ This script automates setup of my Linux Terminal
   - [Arch Linux](#arch-linux)
   - [Ubuntu](#ubuntu)
   - [Kali Linux](#kali-linux)
-- [Update Dotfiles](#update-dotfiles)
 - [Dotfiles Repo](#dotfiles-repo)
 
 ## Preview
@@ -44,11 +43,6 @@ bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/m
 ```
 sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/kali.sh)"
-```
-
-## Update Dotfiles
-```
-bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/update.sh)"
 ```
 
 ## Dotfiles Repo
