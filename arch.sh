@@ -31,7 +31,7 @@ pacman_packages=(
     make curl wget unzip dpkg fzf eza bat zoxide neovim tmux ripgrep fd stow man openssh netcat
 
     # CTF tools
-    perl-image-exiftool gdb ascii ltrace strace checksec
+    perl-image-exiftool gdb ascii ltrace strace checksec patchelf
 
     # Programming languages
     python3 python-pip nodejs npm
@@ -42,6 +42,9 @@ pacman_packages=(
 aur_packages=(
     # System monitoring and fun terminal visuals
     cbonsai pipes.sh pokemon-colorscripts-git oh-my-posh
+
+    # CTF tools
+    pwninit
 )
 sudo pacman -S --noconfirm "${pacman_packages[@]}"
 yay -S --noconfirm "${aur_packages[@]}"
