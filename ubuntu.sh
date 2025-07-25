@@ -18,7 +18,7 @@ pkgs=(
     make curl wget unzip jq dpkg fzf eza zoxide tmux ripgrep fd-find stow
     
     # CTF tools
-    exiftool gdb ascii ltrace strace checksec
+    exiftool gdb ascii ltrace strace checksec patchelf
 
     # Programming languages
     python3 python3-pip nodejs npm
@@ -28,10 +28,6 @@ pkgs=(
 )
 sudo apt install -y "${pkgs[@]}"
 
-# Install neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
-sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 # Install bat
 sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat_.*amd64.deb")) | .browser_download_url') -O bat.deb
 sudo dpkg -i bat.deb
@@ -54,6 +50,13 @@ cd ~
 sudo wget https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb -O fastfetch.deb
 sudo dpkg -i fastfetch.deb
 rm -rf ~/fastfetch.deb
+# Install neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+# Install pwninit
+sudo wget https://github.com/io12/pwninit/releases/latest/download/pwninit -O /usr/bin/pwninit
+sudo chmod +x /usr/bin/pwninit
 
 echo "==> Allow pip3 install by removing EXTERNALLY-MANAGED file"
 sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
