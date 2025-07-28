@@ -31,7 +31,7 @@ pacman_packages=(
     make curl wget unzip dpkg fzf eza bat zoxide neovim tmux ripgrep fd stow man openssh netcat
 
     # CTF tools
-    perl-image-exiftool gdb ascii ltrace strace checksec patchelf
+    perl-image-exiftool gdb ascii ltrace strace checksec patchelf upx
 
     # Programming languages
     base-devel python3 python-pip nodejs npm ruby
