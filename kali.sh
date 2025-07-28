@@ -16,12 +16,12 @@ pkgs=(
 
     # Essential utilities
     make curl wget unzip jq fuse3 dpkg fzf eza zoxide tmux ripgrep fd-find stow
-    
+
     # CTF tools
     exiftool gdb ascii ltrace strace checksec patchelf
 
     # Programming languages
-    python3 python3-pip nodejs npm
+    build-essential python3 python3-pip nodejs npm ruby ruby-dev
 
     # Shell & customization
     zsh
@@ -63,6 +63,7 @@ cd pwndbg
 ./setup.sh
 cd ..
 pip3 install pwntools
+sudo gem install one_gadget
 
 echo "==> Download pokemon-colorscripts"
 git clone --depth=1 https://gitlab.com/phoneybadger/pokemon-colorscripts.git
