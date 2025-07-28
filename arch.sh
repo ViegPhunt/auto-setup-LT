@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "==> WELCOME! Now we will customize Arch Terminal"
+echo "==> WELCOME! Now we will customize Arch-base Terminal"
 echo "==> Created by Phunt_Vieg_"
 
 cd ~
@@ -66,6 +66,7 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins
 
 echo "==> Stow"
 cd ~/dotfiles
+./.config/viegphunt/backup_config.sh
 stow -t ~ .
 cd ~
 

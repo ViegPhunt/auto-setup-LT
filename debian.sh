@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "==> WELCOME! Now we will customize Kali Terminal"
+echo "==> WELCOME! Now we will customize Debian-base Terminal"
 echo "==> Created by Phunt_Vieg_"
 
 cd ~
@@ -13,7 +13,7 @@ echo "==> Download some terminal tool"
 sudo apt install -y build-essential
 pkgs=(
     # System monitoring and fun terminal visuals
-    btop cmatrix cbonsai cowsay fastfetch
+    btop cmatrix cbonsai cowsay
 
     # Essential utilities
     make curl wget unzip jq fuse3 dpkg fzf eza zoxide tmux ripgrep fd-find stow
@@ -47,6 +47,10 @@ sudo make install
 cd ..
 rm -rf pipes.sh
 cd ~
+# Install fastfetch
+sudo wget https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb -O fastfetch.deb
+sudo dpkg -i fastfetch.deb
+rm -rf ~/fastfetch.deb
 # Install neovim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 chmod u+x nvim-linux-x86_64.appimage
@@ -82,8 +86,8 @@ git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
 git clone --depth=1 https://github.com/tmux-plugins/tpm ~/dotfiles/.tmux/plugins/tpm
 
 echo "==> Stow"
-rm -rf ~/.zshrc
 cd ~/dotfiles
+./.config/viegphunt/backup_config.sh
 stow -t ~ .
 cd ~
 

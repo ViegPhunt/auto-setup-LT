@@ -1,15 +1,15 @@
 # Auto Setup Linux Terminal
-This script automates setup of my Linux Terminal
+A simple script to automate the setup of my personalized Linux terminal environment.
 
 ## Table of Contents
 - [Preview](#preview)
-  - [Screenshots](#screenshots)
+	- [Screenshots](#screenshots)
 - [Important Notes](#important-notes)
 - [Installation](#installation)
-  - [Arch Linux](#arch-linux)
-  - [Ubuntu](#ubuntu)
-  - [Kali Linux](#kali-linux)
+	- [Arch-based Distributions](#arch-based-distributions)
+	- [Debian-based Distributions](#debian-based-distributions)
 - [Dotfiles Repo](#dotfiles-repo)
+- [Feedback](#feedback)
 
 ## Preview
 ### Screenshots
@@ -27,22 +27,18 @@ This script automates setup of my Linux Terminal
 > This script does not include package uninstallation, as some packages may already exist on your system by default. Creating an uninstallation script could potentially affect your current setup.
 
 ## Installation
-### Arch Linux
+### Arch-based Distributions
+*Example: Arch Linux, EndeavourOS, Manjaro, etc.*
 ```
 sudo pacman -Syu --noconfirm
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/arch.sh)"
 ```
 
-### Ubuntu
+### Debian-based Distributions
+*Example: Ubuntu, Kali Linux, Linux Mint, etc.*
 ```
 sudo apt update && sudo apt upgrade -y
-bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/ubuntu.sh)"
-```
-
-### Kali Linux
-```
-sudo apt update && sudo apt upgrade -y
-bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/kali.sh)"
+bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/debian.sh)"
 ```
 
 ## Dotfiles Repo
