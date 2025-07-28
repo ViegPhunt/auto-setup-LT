@@ -10,6 +10,7 @@ echo "==> Updating system packages..."
 sudo apt update && sudo apt upgrade -y
 
 echo "==> Download some terminal tool"
+sudo apt install -y build-essential
 pkgs=(
     # System monitoring and fun terminal visuals
     btop cmatrix cbonsai cowsay fastfetch
@@ -21,7 +22,7 @@ pkgs=(
     exiftool gdb ascii ltrace strace checksec patchelf upx-ucl
 
     # Programming languages
-    build-essential python3 python3-pip nodejs npm ruby ruby-dev
+    python3 python3-pip nodejs npm ruby ruby-dev
 
     # Shell & customization
     zsh
