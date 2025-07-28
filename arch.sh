@@ -34,7 +34,7 @@ pacman_packages=(
     perl-image-exiftool gdb ascii ltrace strace checksec patchelf upx
 
     # Programming languages
-    base-devel python3 python-pip nodejs npm ruby
+    python3 python-pip nodejs npm ruby
 
     # Shell & customization
     zsh
