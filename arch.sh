@@ -34,7 +34,7 @@ pacman_packages=(
     perl-image-exiftool gdb ascii ltrace strace checksec patchelf
 
     # Programming languages
-    python3 python-pip nodejs npm
+    base-devel python3 python-pip nodejs npm ruby
 
     # Shell & customization
     zsh
@@ -58,6 +58,7 @@ cd pwndbg
 ./setup.sh
 cd ..
 pip3 install pwntools
+sudo gem install one_gadget
 
 echo "==> Download file config"
 git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
