@@ -18,7 +18,7 @@ pkgs=(
     make curl wget unzip jq dpkg fzf eza zoxide tmux ripgrep fd-find stow
 
     # CTF tools
-    exiftool gdb ascii ltrace strace checksec patchelf
+    exiftool gdb ascii ltrace strace checksec patchelf upx-ucl
 
     # Programming languages
     build-essential python3 python3-pip nodejs npm ruby ruby-dev
