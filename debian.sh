@@ -62,9 +62,6 @@ sudo chmod +x /usr/bin/pwninit
 echo "==> Allow pip3 install by removing EXTERNALLY-MANAGED file"
 sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
 
-echo "==> Fix binwalk issues: force use of system capstone by removing pip version"
-pip uninstall capstone -y
-
 echo "==> Download pwndbg and pwntools"
 git clone --depth=1 https://github.com/pwndbg/pwndbg
 cd pwndbg
