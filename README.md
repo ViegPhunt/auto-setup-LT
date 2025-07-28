@@ -9,7 +9,6 @@ A simple script to automate the setup of my personalized Linux terminal environm
 	- [Arch-based Distributions](#arch-based-distributions)
 	- [Debian-based Distributions](#debian-based-distributions)
 - [Dotfiles Repo](#dotfiles-repo)
-- [Feedback](#feedback)
 
 ## Preview
 ### Screenshots
