@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "==> WELCOME! Now we will customize Arch-base Terminal"
+echo "==> WELCOME! Now we will customize Arch-based Terminal"
 echo "==> Created by Phunt_Vieg_"
 
 cd ~

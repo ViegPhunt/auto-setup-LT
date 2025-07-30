@@ -1,56 +1,35 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "==> WELCOME! Now we will customize Debian-based Terminal"
+echo "==> WELCOME! Now we will customize Fedora-based Terminal"
 echo "==> Created by Phunt_Vieg_"
 
 cd ~
 
 echo "==> Updating system packages..."
-sudo apt update && sudo apt upgrade -y
+sudo dnf update -y
 
 echo "==> Download some terminal tool"
-sudo apt install -y build-essential
+sudo dnf groupinstall -y "Development Tools"
+# Enable eza pkg
+sudo dnf copr enable alternateved/eza
 pkgs=(
     # System monitoring and fun terminal visuals
-    btop cmatrix cbonsai cowsay
+    btop cmatrix cowsay fastfetch
 
     # Essential utilities
-    make curl wget unzip jq fuse3 dpkg fzf eza zoxide tmux ripgrep fd-find stow
+    make curl wget unzip dpkg fzf eza bat zoxide neovim tmux ripgrep fd stow man openssh netcat
 
     # CTF tools
-    exiftool gdb ascii ltrace strace checksec patchelf upx-ucl binwalk
+    perl-Image-ExifTool gdb ascii ltrace strace checksec patchelf upx binwalk
 
     # Programming languages
-    python3 python3-pip nodejs npm ruby ruby-dev
+    python3 python3-pip nodejs npm ruby
 
     # Shell & customization
     zsh
 )
-sudo apt install -y "${pkgs[@]}"
-
-# Install fastfetch
-sudo wget https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb -O fastfetch.deb
-sudo dpkg -i fastfetch.deb
-rm -rf ~/fastfetch.deb
-
-# Install fzf
-git clone --depth=1 https://github.com/junegunn/fzf.git
-cd fzf
-./install --bin
-sudo mv ~/fzf/bin/fzf /usr/local/bin
-cd ~
-rm -rf fzf
-
-# Install bat
-sudo wget $(curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | jq -r '.assets[] | select(.name | test("bat_.*amd64.deb")) | .browser_download_url') -O bat.deb
-sudo dpkg -i bat.deb
-rm -rf bat.deb
-
-# Install neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-chmod u+x nvim-linux-x86_64.appimage
-sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+sudo dnf install -y "${pkgs[@]}"
 
 # Install pipes.sh
 git clone --depth=1 https://github.com/pipeseroni/pipes.sh.git
