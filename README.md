@@ -8,7 +8,7 @@ A simple script to automate the setup of my personalized Linux terminal environm
 - [Installation](#installation)
 	- [Arch-based Distributions](#arch-based-distributions)
 	- [Debian-based Distributions](#debian-based-distributions)
-    - [Fedora-based Distributions](#fedora-based-distributions)
+	- [Fedora-based Distributions](#fedora-based-distributions)
 - [Dotfiles Repo](#dotfiles-repo)
 
 ## Preview
