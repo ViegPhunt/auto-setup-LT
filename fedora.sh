@@ -10,7 +10,7 @@ echo "==> Updating system packages..."
 sudo dnf update -y
 
 echo "==> Download some terminal tool"
-sudo dnf install @c-development @development-tools
+sudo dnf install -y @c-development @development-tools
 # Enable eza pkg
 sudo dnf copr enable alternateved/eza
 pkgs=(
