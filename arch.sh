@@ -9,7 +9,6 @@ cd ~
 echo "==> Updating system packages..."
 sudo pacman -Syu --noconfirm
 
-
 echo "==> Setting locale"
 sudo sed -i '/^#en_US.UTF-8 UTF-8/s/^#//' /etc/locale.gen
 sudo locale-gen
