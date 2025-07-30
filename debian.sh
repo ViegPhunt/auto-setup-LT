@@ -103,5 +103,5 @@ chsh -s "$ZSH_PATH"
 
 
 echo
-echo "==> Done!!! Please restart terminal."
+echo "==> Done!!! Please relogin to apply new config."
 echo
