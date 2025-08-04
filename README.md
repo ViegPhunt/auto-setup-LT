@@ -8,7 +8,6 @@ A simple script to automate the setup of my personalized Linux terminal environm
 - [Installation](#installation)
 	- [Arch-based Distributions](#arch-based-distributions)
 	- [Debian-based Distributions](#debian-based-distributions)
-	- [Fedora-based Distributions](#fedora-based-distributions)
 - [Dotfiles Repo](#dotfiles-repo)
 
 ## Preview
@@ -39,13 +38,6 @@ bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/m
 ```
 sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/debian.sh)"
-```
-
-### Fedora-based Distributions
-*Example: Fedora, Nobara, Ultramarine Linux, etc.*
-```
-sudo dnf update -y
-bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/fedora.sh)"
 ```
 
 ## Dotfiles Repo
