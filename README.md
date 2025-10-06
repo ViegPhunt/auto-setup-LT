@@ -28,14 +28,14 @@ A simple script to automate the setup of my personalized Linux terminal environm
 ## Installation
 ### Arch-based Distributions
 *Example: Arch Linux, EndeavourOS, Manjaro, etc.*
-```
+``` bash
 sudo pacman -Syu --noconfirm
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/arch.sh)"
 ```
 
 ### Debian-based Distributions
 *Example: Ubuntu, Kali Linux, Linux Mint, etc.*
-```
+``` bash
 sudo apt update && sudo apt upgrade -y
 bash -c "$(curl -fSL https://raw.githubusercontent.com/ViegPhunt/auto-setup-LT/main/debian.sh)"
 ```
