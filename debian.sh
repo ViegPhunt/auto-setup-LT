@@ -54,13 +54,6 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x8
 chmod u+x nvim-linux-x86_64.appimage
 sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 
-# Install docker
-# latest_docker=$(curl -s https://download.docker.com/linux/static/stable/x86_64/ | grep -oE 'docker-[0-9.]+\.tgz' | sort -V | tail -1)
-# wget -q https://download.docker.com/linux/static/stable/x86_64/$latest_docker
-# tar xzf $latest_docker
-# sudo cp docker/* /usr/local/bin/
-# sudo rm -rf docker/ $latest_docker
-
 # Install lazydocker
 go install github.com/jesseduffield/lazydocker@latest
 sudo install -Dm755 $HOME/go/bin/lazydocker /usr/local/bin/lazydocker
@@ -104,8 +97,8 @@ pip3 install pwntools
 sudo gem install one_gadget
 
 # echo "==> Set up Docker"
-# sudo systemctl enable --now docker.service
-# sudo usermod -aG docker $USER
+sudo systemctl enable --now docker.service
+sudo usermod -aG docker $USER
 
 echo "==> Download file config"
 git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
