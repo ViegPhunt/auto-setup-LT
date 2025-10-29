@@ -29,7 +29,7 @@ pacman_packages=(
     # Essential utilities
     make curl wget unzip dpkg ripgrep fd man openssh netcat
     fzf eza bat zoxide neovim tmux stow
-    docker-compose lazydocker lazygit
+    docker docker-compose lazydocker lazygit
 
     # CTF tools
     perl-image-exiftool gdb ascii ltrace strace checksec patchelf upx binwalk
