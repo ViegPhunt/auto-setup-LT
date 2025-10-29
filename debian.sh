@@ -16,13 +16,15 @@ pkgs=(
     btop cmatrix cbonsai cowsay
 
     # Essential utilities
-    make curl wget unzip jq fuse3 dpkg fzf eza zoxide tmux ripgrep fd-find stow
+    make curl wget unzip jq fuse3 dpkg ripgrep fd-find
+    fzf eza zoxide tmux stow
+    docker-compose lazygit
 
     # CTF tools
     exiftool gdb ascii ltrace strace checksec patchelf upx-ucl binwalk
 
     # Programming languages
-    python3 python3-pip nodejs npm ruby ruby-dev
+    python3 python3-pip nodejs npm ruby ruby-dev golang
 
     # Shell & customization
     zsh
@@ -51,6 +53,17 @@ rm -rf bat.deb
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 chmod u+x nvim-linux-x86_64.appimage
 sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+
+# Install docker
+# latest_docker=$(curl -s https://download.docker.com/linux/static/stable/x86_64/ | grep -oE 'docker-[0-9.]+\.tgz' | sort -V | tail -1)
+# wget -q https://download.docker.com/linux/static/stable/x86_64/$latest_docker
+# tar xzf $latest_docker
+# sudo cp docker/* /usr/local/bin/
+# sudo rm -rf docker/ $latest_docker
+
+# Install lazydocker
+go install github.com/jesseduffield/lazydocker@latest
+sudo install -Dm755 $HOME/go/bin/lazydocker /usr/local/bin/lazydocker
 
 # Install pipes.sh
 git clone --depth=1 https://github.com/pipeseroni/pipes.sh.git
@@ -85,6 +98,11 @@ cd pwndbg
 cd ..
 pip3 install pwntools
 sudo gem install one_gadget
+
+# echo "==> Set up Docker"
+# sudo systemctl enable --now docker.service
+# sudo usermod -aG docker $USER
+# newgrp docker
 
 echo "==> Download file config"
 git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
