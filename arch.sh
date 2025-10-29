@@ -29,7 +29,7 @@ pacman_packages=(
     # Essential utilities
     make curl wget unzip dpkg ripgrep fd man openssh netcat
     fzf eza bat zoxide neovim tmux stow
-    docker docker-compose lazydocker lazygit
+    lazydocker lazygit
 
     # CTF tools
     perl-image-exiftool gdb ascii ltrace strace checksec patchelf upx binwalk
@@ -60,10 +60,6 @@ cd pwndbg
 cd ..
 pip3 install pwntools
 sudo gem install one_gadget
-
-echo "==> Set up Docker"
-sudo systemctl enable --now docker.service
-sudo usermod -aG docker $USER
 
 echo "==> Download file config"
 git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
