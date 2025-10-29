@@ -18,7 +18,6 @@ pkgs=(
     # Essential utilities
     make curl wget unzip jq fuse3 dpkg ripgrep fd-find
     fzf eza zoxide tmux stow
-    docker-compose
 
     # CTF tools
     exiftool gdb ascii ltrace strace checksec patchelf upx-ucl binwalk
@@ -95,10 +94,6 @@ cd pwndbg
 cd ..
 pip3 install pwntools
 sudo gem install one_gadget
-
-# echo "==> Set up Docker"
-# sudo systemctl enable --now docker.service
-# sudo usermod -aG docker $USER
 
 echo "==> Download file config"
 git clone --depth=1 https://github.com/ViegPhunt/Dotfiles.git ~/dotfiles
