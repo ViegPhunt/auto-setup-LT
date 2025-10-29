@@ -18,7 +18,7 @@ pkgs=(
     # Essential utilities
     make curl wget unzip jq fuse3 dpkg ripgrep fd-find
     fzf eza zoxide tmux stow
-    docker-compose lazygit
+    docker-compose
 
     # CTF tools
     exiftool gdb ascii ltrace strace checksec patchelf upx-ucl binwalk
@@ -64,6 +64,10 @@ sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 # Install lazydocker
 go install github.com/jesseduffield/lazydocker@latest
 sudo install -Dm755 $HOME/go/bin/lazydocker /usr/local/bin/lazydocker
+
+# Install lazygit
+go install github.com/jesseduffield/lazygit@latest
+sudo install -Dm755 $HOME/go/bin/lazygit /usr/local/bin/lazygit
 
 # Install pipes.sh
 git clone --depth=1 https://github.com/pipeseroni/pipes.sh.git
