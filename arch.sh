@@ -18,6 +18,7 @@ echo -e "
              Created by \e[1;4mPhunt_Vieg_
 ${WHITE}"
 
+cd ~
 
 # Updating the system
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[1/10]${GREEN} ==> Updating system packages\n---------------------------------------------------------------------\n${WHITE}"
