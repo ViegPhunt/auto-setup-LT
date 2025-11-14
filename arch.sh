@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+
 # Variables
 #----------------------------
 # Color variables
@@ -39,6 +40,7 @@ makepkg -si --noconfirm
 cd ~
 rm -rf ~/yay
 
+
 pacman_packages=(
     # System monitoring and fun terminal visuals
     btop cmatrix cowsay fastfetch
@@ -64,6 +66,7 @@ aur_packages=(
     # CTF tools
     pwninit
 )
+
 
 # Download pacman packages
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[4/10]${GREEN} ==> Download pacman packages\n---------------------------------------------------------------------\n${WHITE}"
@@ -109,8 +112,6 @@ echo -e "${GREEN}\n-------------------------------------------------------------
 ZSH_PATH="$(which zsh)"
 grep -qxF "$ZSH_PATH" /etc/shells || echo "$ZSH_PATH" | sudo tee -a /etc/shells
 chsh -s "$ZSH_PATH"
-
-
 
 
 echo -e "\n ${GREEN}
