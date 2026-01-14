@@ -126,7 +126,7 @@ git clone --depth=1 https://github.com/pwndbg/pwndbg
 cd pwndbg
 ./setup.sh
 cd ..
-pip3 install pwntools
+# pip3 install pwntools
 sudo gem install one_gadget
 
 
