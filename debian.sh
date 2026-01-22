@@ -25,8 +25,11 @@ cd ~
 
 # Updating system packages
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[1/7]${GREEN} ==> Updating system packages\n---------------------------------------------------------------------\n${WHITE}"
-sudo apt update && sudo apt upgrade -y
 
+# Remove deadsnakes
+sudo rm -f /etc/apt/sources.list.d/*deadsnakes*.list
+
+sudo apt update && sudo apt upgrade -y
 
 # Download some terminal tool
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[2/7]${GREEN} ==> Download some terminal tool\n---------------------------------------------------------------------\n${WHITE}"
