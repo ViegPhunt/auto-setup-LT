@@ -1,5 +1,4 @@
 # Auto Setup Linux Terminal
-A simple script to automate the setup of my personalized Linux terminal environment.
 
 ## Table of Contents
 - [Preview](#preview)
