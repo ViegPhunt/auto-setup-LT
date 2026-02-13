@@ -50,6 +50,9 @@ pkgs=(
 
     # Shell & customization
     zsh
+
+    # Install command-not-found
+    command-not-found
 )
 sudo apt install -y "${pkgs[@]}"
 
