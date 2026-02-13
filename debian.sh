@@ -40,7 +40,7 @@ pkgs=(
 
     # Essential utilities
     make curl wget unzip jq fuse3 dpkg ripgrep fd-find
-    fzf eza zoxide tmux stow
+    fzf eza zoxide tmux stow command-not-found
 
     # CTF tools
     exiftool gdb ascii ltrace strace checksec patchelf upx-ucl binwalk
@@ -50,9 +50,6 @@ pkgs=(
 
     # Shell & customization
     zsh
-
-    # Install command-not-found
-    command-not-found
 )
 sudo apt install -y "${pkgs[@]}"
 
