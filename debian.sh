@@ -118,18 +118,12 @@ sudo wget https://github.com/io12/pwninit/releases/latest/download/pwninit -O /u
 sudo chmod +x /usr/bin/pwninit
 
 
-# Allow pip3 install by removing EXTERNALLY-MANAGED file
-echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[3/7]${GREEN} ==> Allow pip3 install by removing EXTERNALLY-MANAGED file\n---------------------------------------------------------------------\n${WHITE}"
-sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
-
-
 # Download pwndbg and pwntools
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[4/7]${GREEN} ==> Download pwndbg and pwntools\n---------------------------------------------------------------------\n${WHITE}"
 git clone --depth=1 https://github.com/pwndbg/pwndbg
 cd pwndbg
 ./setup.sh
 cd ..
-# pip3 install pwntools
 sudo gem install one_gadget
 
 
