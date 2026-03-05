@@ -79,18 +79,12 @@ echo -e "${GREEN}\n-------------------------------------------------------------
 yay -S --noconfirm "${aur_packages[@]}"
 
 
-# Allow pip3 install by removing EXTERNALLY-MANAGED file
-echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[6/10]${GREEN} ==> Allow pip3 install by removing EXTERNALLY-MANAGED file\n---------------------------------------------------------------------\n${WHITE}"
-sudo rm -rf $(python3 -c "import sys; print(f'/usr/lib/python{sys.version_info.major}.{sys.version_info.minor}/EXTERNALLY-MANAGED')")
-
-
 # Download pwndbg and pwntools
 echo -e "${GREEN}\n---------------------------------------------------------------------\n${YELLOW}[7/10]${GREEN} ==> Download pwndbg and pwntools\n---------------------------------------------------------------------\n${WHITE}"
 git clone --depth=1 https://github.com/pwndbg/pwndbg
 cd pwndbg
 ./setup.sh
 cd ..
-# pip3 install pwntools
 sudo gem install one_gadget
 
 
