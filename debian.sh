@@ -81,16 +81,6 @@ chmod u+x nvim-linux-x86_64.appimage
 sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
 
 
-# Install lazydocker
-go install github.com/jesseduffield/lazydocker@latest
-sudo install -Dm755 $HOME/go/bin/lazydocker /usr/local/bin/lazydocker
-
-
-# Install lazygit
-go install github.com/jesseduffield/lazygit@latest
-sudo install -Dm755 $HOME/go/bin/lazygit /usr/local/bin/lazygit
-
-
 # Install pipes.sh
 git clone --depth=1 https://github.com/pipeseroni/pipes.sh.git
 cd pipes.sh
